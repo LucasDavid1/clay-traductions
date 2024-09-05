@@ -57,22 +57,7 @@ function App() {
           <p key={key}>{key}: {value}</p>
         ))}
       </div>
-      <form onSubmit={handleAddTranslation}>
-        <h2>Add New Translation</h2>
-        <input
-          type="text"
-          placeholder="Key"
-          value={newTranslation.key}
-          onChange={(e) => setNewTranslation({...newTranslation, key: e.target.value})}
-        />
-        <input
-          type="text"
-          placeholder="Value"
-          value={newTranslation.value}
-          onChange={(e) => setNewTranslation({...newTranslation, value: e.target.value})}
-        />
-        <button type="submit">Add Translation</button>
-      </form>
+      
     </div>
   );
 }
