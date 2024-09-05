@@ -13,6 +13,8 @@ mongoose.connect(process.env.MONGODB_URI, {
 
 // Middleware
 app.use(express.json());
+const cors = require('cors');
+app.use(cors());
 
 // GET endpoint to retrieve all translations for a specific language
 app.get('/translations/:language', async (req, res) => {
@@ -61,5 +63,5 @@ app.post('/translations', async (req, res) => {
 });
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
