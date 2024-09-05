@@ -39,7 +39,12 @@ MONGODB_URI=mongodb://<your-mongo-db-uri>
 npm run dev
 ```
 
-4. **Run backend:**
+4.1 **Run backend on the background:**
+```bash
+pm2 start api.js
+```
+
+5. **Run Frontend:**
 ```bash
 cd clay-translations-frontend
 npm install
