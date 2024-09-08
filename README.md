@@ -14,6 +14,32 @@ This is a Node.js and Express-based API that connects to a MongoDB database for 
 - **MongoDB**
 - **dotenv**
 
+
+## MongoDB Schema
+
+The application uses a MongoDB schema for storing translations. The schema is defined using Mongoose, a Node.js library for MongoDB object modeling. Below is an explanation of the `TranslationSchema`:
+
+### TranslationSchema
+
+```javascript
+const TranslationSchema = new mongoose.Schema({
+  key: { type: String, required: true },
+  language: { type: String, required: true },
+  value: { type: String, required: true }
+});
+```
+
+### Fields:
+- **key**: A string that identifies the specific text or content being translated (e.g., "greeting"). This field is required.
+- **language**: A string that stores the language code (e.g., "en" for English, "es" for Spanish). This field is required.
+- **value**: A string containing the actual translation for the given key and language. This field is required.
+
+### Unique index:
+Composite index on the combination of the `key` and `language` fields:
+```javascript
+TranslationSchema.index({ key: 1, language: 1 }, { unique: true });
+```
+
 ## Installation
 
 1. **Clone the repository:**
