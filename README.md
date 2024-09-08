@@ -1,4 +1,4 @@
-[clay-translations-demo.webm](https://github.com/user-attachments/assets/d8100573-525e-4de6-af14-8924b8d92526)# Translation API
+# Translation API
 
 This is a Node.js and Express-based API that connects to a MongoDB database for managing translations. It provides endpoints for retrieving, adding, and updating translations in multiple languages.
 
